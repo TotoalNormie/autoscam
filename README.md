@@ -9,4 +9,4 @@
 
  Ja būs laiks, mēs uztaisīsim mājaslapu atsevišķam sludinājumam.
 
-čau 
+čau sds

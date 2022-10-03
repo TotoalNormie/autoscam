@@ -8,3 +8,5 @@
  3. Output mājaslapā būs redzami vairāki mašīnu piedāvājumi tabulas formā (ne <table>), katrs sludinājums būs savā konteinerī. Hoverojot virs konteinera būs redzams papildus inforācija par sludinājumu. Input mājaslapā būs form kur varēs ievadīt marku, modeli, attēlu, nobraukumu, izlaišanas gadu un aprakstu. Uz abām mājaslapām būs Header un navigation bar. Header būs search bar, bet navigation būs vairākas pogas. Pirmā vedīs uz sludinājumiem, otrā izveidos sludinājumu, trešā būs uz logo un vedīs uz galveno mājaslapu. Zem logo būs mājaslapas nosaukums.
 
  Ja būs laiks, mēs uztaisīsim mājaslapu atsevišķam sludinājumam.
+
+čau

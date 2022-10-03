@@ -1,0 +1,16 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    font-size: 14px;
+}
+
+.navigation {
+    width: 20em;
+    min-height: 100vh;
+    /* background-color: red; */
+}
+

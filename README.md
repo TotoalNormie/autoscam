@@ -1,0 +1,2 @@
+# AutoScam.lv
+ school project

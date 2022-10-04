@@ -2,165 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            margin: 0px;
-            height: 100%;
-            background-color: grey;
-        }
-        .vertical{
-            display: flex;
-            justify-content: center;
-            border-style: solid;
-            height:100vw;
-            width: 20%;
-        }
-        .horizontal{
-            display: flex;
-            justify-content: center;
-            border-style: solid;
-            border-left-style: none;
-            border-bottom-style: none;
-            height: 10vh;
-            width: 100%;
-            text-align: center;
-        }
-        .cont-horizontal{
-            border-style: solid;
-            border-left-style: none;
-            height: 10vh;
-            width: 100%;
-        }
-        .blakus{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            width: 100%;
-         
-        }
-       .search{
-            margin-top: 3vh;
-        }
-        .list{
-            background-color: darkgray ;
-            height: 34pc;
-        }
-        .data{
-            border-style: solid;
-            background-color: white;
-            display: flex;
-            align-items: center;
-            margin: 1pc;
-        }
-        .Main-data{
-            margin-left: 5pc;
-            width: 90%;
-        }
-        .car{
-            border-style: solid;
-            flex: 33%;
-            margin: 1pc;
-        }
-        .edit{
-            background-color: green;
-            text-align: center;
-            flex: 50%;
-            width: 10%;
-            font-size: 1.2pc;
-            margin-left: 1pc;
-            text-decoration: none;
-            color: black;
-        }
-        .delete{
-            background-color: red;
-            text-align: center;
-            width: 10%;
-            font-size: 1.2pc;
-            flex: 50%;
-            margin-left: 1pc;
-            margin-right: 1pc;
-            text-decoration: none;
-            color: black;
-        }
-        div h3{
-            margin: 1pc;
-        }
-        .content{
-            flex: 10%;
-            display: flex;
-        }
-        #small{
-            flex: 5%;
-        }
-        #large{
-            flex:45%;
-        }
-        .top{
-            display: flex;
-            margin-left: 2pc;
-        }
-       
-       @media only screen and (max-width: 1100px) {
-        .vertical{
-            display: none;
-        }
-        .horizontal{
-            border-style: solid;
-        }
-        .list{
-            height: 51pc;
-            background-color: transparent    ;
-        }
-        .Main-data{
-            margin: 0;
-        }
-        .virsrkasts{
-            text-align: center;
-        }
-        .data{
-            width: 100%;
-        }
-        h3{
-            font-size: small;
-        }
-        h1{
-            font-size: medium;
-            margin-right: 1pc;
-        }
-        .horizontal{
-            border-style: none;
-        }
-        .delete{
-            width: 100%;
-        }
-        .cont-horizontal{
-            width: auto;
-        }
-        
-    }
-    </style>
+    <link rel="stylesheet" href="style/main.css">
+    <title>Auto Scam</title>
 </head>
 <body>
-    <div class="body">
-        <div class="blakus">
-            <div class="vertical">
-                <div class="content-vertical">
-                    
-                </div>
+    <div class="site-layout">
+        <div class="menu"></div>
+        <div class="header"></div>
+        <main>
+            <div class="layout"></div>
+            <div class="post-container">
             </div>
-            <div class="cont-horizontal">
-                <div class="horizontal">
-                    <form class="search">
-                        <input type="text">
-                        <input type="submit" value="Submit">
-                    </form>
-                </div>
-                <div class="Main-data">
-                 
-            </div>
-        </div>
+        </main>
     </div>
 </body>
 </html>

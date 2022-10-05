@@ -45,17 +45,17 @@ main {
     /* height: 5em; */
     /* margin: 1em 0; */
     /* background-color: rgb(120, 149, 178); */
-    background-color: rgb(174, 189, 202);
+    /* background-color: rgb(174, 189, 202); */
     /* color: rgb(245, 239, 230); */
-    color: white;
-    border: .5em solid rgb(206, 192, 155);
+    color: black;
+    /* border: .5em solid rgb(206, 192, 155); */
     border-radius: 1em;
     text-decoration: none;
 }
 
 .image {
     width: 100%;
-    height: 10em;
+    aspect-ratio: 16 / 9;
     color: transparent;
     position: relative;
     display: flex;
@@ -70,6 +70,7 @@ main {
     width: 100%; height: 100%;
     background-image: url("https://carwow-uk-wp-3.imgix.net/Volvo-XC40-white-scaled.jpg?auto=format&cs=tinysrgb&fit=clip&ixlib=rb-1.1.0&q=10&w=800");
     background-size: cover;
+    background-position: center;
     border-radius: .5em .5em 0 0;
     transition-duration: .5s;
 }

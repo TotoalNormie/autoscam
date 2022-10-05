@@ -37,6 +37,10 @@ body {
     grid-row: 1 / 2;
     background-color: rgb(120, 149, 178);
 }
+.data{
+    display: flex;
+    justify-content: center;
+}
 
 .blakus{
     display: flex;
@@ -77,6 +81,7 @@ body {
     background-color: rgb(174, 189, 202);
     border-radius: 1pc;
     border: 5px solid rgb(232, 223, 202);
+    width: 90%;
 }
 .form{
     text-align: center;

@@ -26,46 +26,48 @@
         </div>
         <main>
             <div class="layout"></div>
-            <div class="post-container"> 
-                <form class="form" method="post">
-                    <div class="blakus">
-                        <div class="column">
-                            <label for="fname">Marka</label>
-                            <select class="input">
-                                <option hidden value="audi">Audi</option>
-                                <option value="audi">Audi</option>
-                                <option value="bmw">BMW</option>
-                                <option value="mazda">Mazda</option>
-                                <option value="mercedes">Mercedes</option>
-                                <option value="toyota">Toyota</option>
-                                <option value="cits">Cits</option>
-                            </select>
-                            <label for="fname">Modelis</label>
-                            <input class="input" type="text">
-                        </div>
-                        <div class="column">    
-                            <label for="fname">Gads</label>
-                            <input class="input" type="date">
-                            <label for="fname">Tilpums</label>
-                            <input class="input" type="number" min="0.1" max="100">
-                        </div>
-                    </div>
-                    <div class="blakus">
-                        <div class="center">
+            <div class="data">
+                <div class="post-container"> 
+                    <form class="form" method="post">
+                        <div class="blakus">
                             <div class="column">
-                                <label for="fname">Apraksts</label>
-                                <textarea class="input" id="textarea" maxlength="500"></textarea>
+                                <label for="fname">Marka</label>
+                                <select class="input">
+                                    <option hidden value="audi">Audi</option>
+                                    <option value="audi">Audi</option>
+                                    <option value="bmw">BMW</option>
+                                    <option value="mazda">Mazda</option>
+                                    <option value="mercedes">Mercedes</option>
+                                    <option value="toyota">Toyota</option>
+                                    <option value="cits">Cits</option>
+                                </select>
+                                <label for="fname">Modelis</label>
+                                <input class="input" type="text">
                             </div>
-                            <div class="column">
-                                <label for="fname">Attēls</label>
-                                <input type="file" class="input" name="myImage" accept="image/png, image/gif, image/jpeg" />
-                                <label for="fname">Nobraukums</label>
-                                <input class="input" type="number" min="1" max="10000000">
+                            <div class="column">    
+                                <label for="fname">Gads</label>
+                                <input class="input" type="date">
+                                <label for="fname">Tilpums</label>
+                                <input class="input" type="number" min="0.1" max="100">
                             </div>
                         </div>
-                    </div>
-                        <input class="submit" type="submit">
-                </form>
+                        <div class="blakus">
+                            <div class="center">
+                                <div class="column">
+                                    <label for="fname">Apraksts</label>
+                                    <textarea class="input" id="textarea" maxlength="500"></textarea>
+                                </div>
+                                <div class="column">
+                                    <label for="fname">Attēls</label>
+                                    <input type="file" class="input" name="myImage" accept="image/png, image/gif, image/jpeg" />
+                                    <label for="fname">Nobraukums</label>
+                                    <input class="input" type="number" min="1" max="10000000">
+                                </div>
+                            </div>
+                        </div>
+                            <input class="submit" type="submit">
+                    </form>
+                </div>
             </div>
         </main>
     </div>

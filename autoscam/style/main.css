@@ -36,8 +36,18 @@ body {
     height: 5em;
     grid-row: 1 / 2;
     background-color: rgb(120, 149, 178);
-
 }
+.content-vertical{
+    margin: 2pc;
+}
+.circle {
+    width: 5pc;
+    height: 5pc;
+    border-radius: 50%;
+    background-image: url("https://api.logo.com/api/v2/images?format=webp&logo=logo_d8e287f4-8ff8-49e0-8c38-389f2e87b722&width=2000&quality=100&background=transparent&fit=contain&u=1664969193");
+    background-size: cover;
+}
+
 main {
     width: 100%;
     min-height: 100%;
@@ -81,24 +91,12 @@ h2 {
     padding: 4px;
     border-radius: 4px;
 }
-<<<<<<< HEAD
 
 .image-container {
     width: 100%;
     height: 12em;
     position: relative;
     color: transparent;
-=======
-.content-vertical{
-    margin: 2pc;
-}
-.circle {
-    width: 5pc;
-    height: 5pc;
-    border-radius: 50%;
-    background-image: url("https://api.logo.com/api/v2/images?format=webp&logo=logo_d8e287f4-8ff8-49e0-8c38-389f2e87b722&width=2000&quality=100&background=transparent&fit=contain&u=1664969193");
-    background-size: cover;
->>>>>>> 7cde59ab6650924e6f6025f842ac6a7d2a1d023d
 }
 .image {
     width: 100%;

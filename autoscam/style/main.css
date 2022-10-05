@@ -40,12 +40,9 @@ body {
 .content-vertical{
     margin: 2pc;
 }
-.circle {
+img {
     width: 5pc;
     height: 5pc;
-    border-radius: 50%;
-    background-image: url("https://api.logo.com/api/v2/images?format=webp&logo=logo_d8e287f4-8ff8-49e0-8c38-389f2e87b722&width=2000&quality=100&background=transparent&fit=contain&u=1664969193");
-    background-size: cover;
 }
 
 main {

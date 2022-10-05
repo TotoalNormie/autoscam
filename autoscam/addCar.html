@@ -10,7 +10,9 @@
 </head>
 <body>
     <div class="site-layout">
-        <div class="menu"></div>
+        <div class="menu">
+            <a href="index.html">Sludinājumi</a>
+        </div>
         <div class="header">
             <form class="search">
                 <input type="text">
@@ -23,20 +25,27 @@
                 <form class="form" method="post">
                     <div class="blakus">
                         <div class="column">
-                            <label for="fname">Ievadlauks</label>
-                            <input class="input" type="text">
-                            <label for="fname">Ievadlauks</label>
+                            <label for="fname">Marka</label>
+                            <select class="input">
+                                <option hidden value="audi">Audi</option>
+                                <option value="audi">Audi</option>
+                                <option value="bmw">BMW</option>
+                                <option value="mazda">Mazda</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="toyota">Toyota</option>
+                                <option value="cits">Cits</option>
+                            </select>
+                            <label for="fname">Modelis</label>
                             <input class="input" type="text">
                         </div>
-                        <div class="column">
-                            <label for="fname">Izvēles lauks</label>
-                            <select class="input"></select>
-                            <label for="fname">Datuma izvēles lauks</label>
+                        <div class="column">    
+                            <label for="fname">Gads</label>
                             <input class="input" type="date">
+                            <label for="fname">Apraksts</label>
+                            <textarea></textarea>
                         </div>
                         <div class="column">
-                            <label for="fname">Ievadlauks</label>
-                            <textarea></textarea>
+                           
                             <label for="fname">Attēls</label>
                             <input type="file" name="myImage" accept="image/png, image/gif, image/jpeg" />
                         </div>

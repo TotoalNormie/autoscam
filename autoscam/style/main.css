@@ -2,10 +2,13 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
 body {
     margin: 0;
     font-size: 14px;
     background-color: #F5EFE6;
+    font-family: 'Fira Sans', sans-serif;
 }
 .site-layout {
     min-height: 100vh;
@@ -36,8 +39,8 @@ main {
 
 .post-container {
     display: grid;
-    margin: 0 3em;
-    grid-template-columns: repeat(4, 1fr);
+    margin: 3em;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1em;
 }
 
@@ -45,10 +48,10 @@ main {
     /* height: 5em; */
     /* margin: 1em 0; */
     /* background-color: rgb(120, 149, 178); */
-    /* background-color: rgb(174, 189, 202); */
+    background-color: rgb(174, 189, 202);
     /* color: rgb(245, 239, 230); */
     color: black;
-    /* border: .5em solid rgb(206, 192, 155); */
+    border: 3px solid rgb(206, 192, 155);
     border-radius: 1em;
     text-decoration: none;
 }
@@ -71,13 +74,18 @@ main {
     background-image: url("https://carwow-uk-wp-3.imgix.net/Volvo-XC40-white-scaled.jpg?auto=format&cs=tinysrgb&fit=clip&ixlib=rb-1.1.0&q=10&w=800");
     background-size: cover;
     background-position: center;
-    border-radius: .5em .5em 0 0;
+    border-radius: .7em .7em 0 0;
     transition-duration: .5s;
 }
 .image-text {
     z-index: 2;
-    margin: 1em;
+    height: 100%;
+    margin: 2em;
     transition-duration: .5s;
+    overflow: hidden;
+}
+.image-tex::after {
+    content: "...";
 }
 .image:hover::before {
     filter: blur(2px) brightness(70%);

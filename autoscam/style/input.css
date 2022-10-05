@@ -51,6 +51,9 @@ main {
 .post-container {
     margin: 5pc;
 }
+.form{
+    text-align: center;
+}
 
 .post {
     height: 5em;

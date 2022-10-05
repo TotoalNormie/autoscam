@@ -2,10 +2,13 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
 body {
     margin: 0;
     font-size: 14px;
     background-color: #F5EFE6;
+    font-family: 'Fira Sans', sans-serif;
 }
 .site-layout {
     min-height: 100vh;
@@ -45,11 +48,17 @@ main {
     margin: 0pc 6pc 3pc 3pc;
 }
 .input{
-    min-width: 10pc;
+    min-width: 12pc;
     max-width: 15pc;
+    background-color: rgb(232, 223, 202);
+    border: 1px solid #ccc;
+    padding: 0.2pc 0.4pc;
+    cursor: pointer;
 }
 .post-container {
     margin: 5pc;
+    background-color: rgb(174, 189, 202);
+    border-radius: 1pc;
 }
 .form{
     text-align: center;
@@ -57,10 +66,19 @@ main {
 }
 .submit{
     margin: 1pc;
+    background-color: rgb(232, 223, 202);
+    border-style: none;
+    border-radius: 1pc;
+    width: 6pc;
+    height: 3pc;
+    cursor: pointer;
 }
 .post {
     height: 5em;
     /* margin: 1em 0; */
     background-color: rgb(120, 149, 178);
 }
+ label{
+    margin: 1pc;
+ }
 

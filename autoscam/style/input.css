@@ -49,7 +49,7 @@ main {
 }
 .input{
     min-width: 12pc;
-    max-width: 15pc;
+    max-width: 12pc;
     background-color: rgb(232, 223, 202);
     border: 1px solid #ccc;
     padding: 0.2pc 0.4pc;
@@ -63,6 +63,7 @@ main {
 .form{
     text-align: center;
     padding: 1pc;
+    font-size: large;
 }
 .submit{
     margin: 1pc;

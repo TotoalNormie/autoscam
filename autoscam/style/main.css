@@ -58,7 +58,7 @@ main {
     display: grid;
     margin: 3em;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1em;
+    gap: 3em 1.5em;
 }
 .post {
     background-color: rgb(245, 239, 230);

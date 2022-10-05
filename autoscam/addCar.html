@@ -12,17 +12,15 @@
     <div class="site-layout">
         <div class="menu">
             <div class="content-vertical">
-                <div class="circle"><img src="/images/logo.jpg">
-                </div>
+                <div class="circle"></div>  
                 <div class="text">
-                 
                     <a href="index.html">Sludinājumi</a>
                 </div>
             </div>
         </div>
         <div class="header">
             <form class="search">
-                <input type="text">
+                <input type="text" class="search">
                 <input type="submit" value="Meklēt" value="Submit">
             </form>
         </div>
@@ -51,19 +49,21 @@
                             <label for="fname">Tilpums</label>
                             <input class="input" type="number" min="0.1" max="100">
                         </div>
-                        <div class="column">
-                            <label for="fname">Attēls</label>
-                            <input type="file" class="input" name="myImage" accept="image/png, image/gif, image/jpeg" />
-                            <label for="fname">Nobraukums</label>
-                            <input class="input" type="number" min="1" max="10000000">
-                        </div>
                     </div>
+                    <div class="blakus">
                         <div class="center">
                             <div class="column">
                                 <label for="fname">Apraksts</label>
                                 <textarea class="input" id="textarea" maxlength="500"></textarea>
                             </div>
+                            <div class="column">
+                                <label for="fname">Attēls</label>
+                                <input type="file" class="input" name="myImage" accept="image/png, image/gif, image/jpeg" />
+                                <label for="fname">Nobraukums</label>
+                                <input class="input" type="number" min="1" max="10000000">
+                            </div>
                         </div>
+                    </div>
                         <input class="submit" type="submit">
                 </form>
             </div>

@@ -10,19 +10,22 @@ body {
 .site-layout {
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 20em 1fr;
+    grid-template-columns: 17em 1fr;
     grid-template-rows: 5em auto;
 }
 .menu {
     min-height: 100vh;
     grid-row: 1 / 3;
-    background-color: rgb(232, 223, 202);
+    /* background-color: rgb(232, 223, 202); */
+    background-color: rgb(206, 192, 155);
 }
 .header {
     width: 100%;
     height: 5em;
     grid-row: 1 / 2;
-    background-color: rgb(174, 189, 202);
+    /* background-color: rgb(174, 189, 202); */
+    background-color: rgb(120, 149, 178);
+
 }
 main {
     grid-column: 2 / 3;
@@ -39,7 +42,46 @@ main {
 }
 
 .post {
-    height: 5em;
+    /* height: 5em; */
     /* margin: 1em 0; */
-    background-color: rgb(120, 149, 178);
+    /* background-color: rgb(120, 149, 178); */
+    background-color: rgb(174, 189, 202);
+    /* color: rgb(245, 239, 230); */
+    color: white;
+    border: .5em solid rgb(206, 192, 155);
+    border-radius: 1em;
+    text-decoration: none;
 }
+
+.image {
+    width: 100%;
+    height: 10em;
+    color: transparent;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("https://carwow-uk-wp-3.imgix.net/Volvo-XC40-white-scaled.jpg?auto=format&cs=tinysrgb&fit=clip&ixlib=rb-1.1.0&q=10&w=800");
+    background-size: cover;
+    border-radius: .5em .5em 0 0;
+    transition-duration: .5s;
+}
+.image-text {
+    z-index: 2;
+    margin: 1em;
+    transition-duration: .5s;
+}
+.image:hover::before {
+    filter: blur(2px) brightness(70%);
+}
+.image:hover {
+    color: white;
+}
+

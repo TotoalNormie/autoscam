@@ -19,6 +19,7 @@
             </div>
         </div>
         <div class="header">
+            <button id="show-menu" onclick="showMenu()">☰</button>
             <form class="search">
                 <input type="text" class="search">
                 <input type="submit" value="Meklēt" value="Submit">
@@ -140,5 +141,13 @@
                 
         </main>
     </div>
+    <script>
+        let show = document.getElementById("show-menu");
+        let close = document.getElementById("close-menu");
+        function showMenu() {
+            show.setAttribute("style", "animation: pop-in .4s ease-out 1");
+            show.style.display = "absolute";
+        }
+    </script>
 </body>
 </html>

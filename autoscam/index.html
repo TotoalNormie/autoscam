@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="style/layout.css">
     <link rel="stylesheet" href="style/main.css">
     <title>Auto Scam</title>
@@ -12,6 +13,7 @@
     <div class="site-layout">
         <div class="menu">
             <div class="content-vertical">
+                <button id="close-menu" onclick="closeMenu()">&#171;</button>
                 <a href="index.html">
                     <img src="images/logo.png" alt="">
                 </a>
@@ -144,11 +146,21 @@
         </main>
     </div>
     <script>
-        let show = document.getElementById("show-menu");
-        let close = document.getElementById("close-menu");
+        window.onresize = function(){ location.reload(); }
         function showMenu() {
-            show.setAttribute("style", "animation: pop-in .4s ease-out 1");
-            show.style.display = "absolute";
+            $(".menu").css("width", "17em");
+            $(".menu").css("animation", "pop-in .5s ease-out 1");
+            $(".content-vertical").css("display", "block");
+            setTimeout(() => {
+                $(".menu").css("animation", "none");
+            }, 470);
+        }
+        function closeMenu() {
+            $(".menu").css("animation", "pop-out .5s ease-out 1");
+            setTimeout(() => {
+                $(".menu").css("width", 0);
+                $(".content-vertical").css("display", "none");
+            }, 500);
         }
     </script>
 </body>

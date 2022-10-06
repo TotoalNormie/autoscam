@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="style/layout.css">
     <link rel="stylesheet" href="style/main.css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
     <title>Auto Scam</title>
 </head>
 <body>
@@ -146,7 +147,6 @@
         </main>
     </div>
     <script>
-        window.onresize = function(){ location.reload(); }
         function showMenu() {
             $(".menu").css("width", "17em");
             $(".menu").css("animation", "pop-in .5s ease-out 1");
@@ -162,6 +162,15 @@
                 $(".content-vertical").css("display", "none");
             }, 500);
         }
+        // width 734
+        $(window).on("resize", function(){
+            if($("html").width() >= 734){
+                // alert("width too high")
+                $(".menu").removeAttr("style");
+                $(".content-vertical").removeAttr("style");
+            }
+        });
+        
     </script>
 </body>
 </html>

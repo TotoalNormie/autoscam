@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="style/input.css">
     <title>Auto Scam</title>
 </head>
@@ -39,8 +40,10 @@
                                     <option value="mazda">Mazda</option>
                                     <option value="mercedes">Mercedes</option>
                                     <option value="toyota">Toyota</option>
-                                    <option value="cits">Cits</option>
+                                    <option value="cits">Cita</option>
                                 </select>
+                                <label for="fname" class="other">Cita Marka</label>
+                                <input class="input other" type="text">
                                 <label for="fname">Modelis</label>
                                 <input class="input" type="text">
                             </div>
@@ -58,10 +61,10 @@
                                     <textarea class="input" id="textarea" maxlength="500"></textarea>
                                 </div>
                                 <div class="column">
-                                    <label for="fname">Attēls</label>
-                                    <input type="file" class="input" name="myImage" accept="image/png, image/gif, image/jpeg" />
                                     <label for="fname">Nobraukums</label>
                                     <input class="input" type="number" min="1" max="10000000">
+                                    <label for="fname">Attēls</label>
+                                    <input type="file" class="input" name="myImage" accept="image/png, image/gif, image/jpeg" />
                                 </div>
                             </div>
                         </div>
@@ -71,5 +74,14 @@
             </div>
         </main>
     </div>
+    <script>
+        $("select").on("change ready", function(){
+            if($("select").val() == "cits") {
+                $(".other").show();
+            }else {
+                $(".other").hide();
+            } 
+        });
+    </script>
 </body>
 </html>

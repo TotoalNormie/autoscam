@@ -106,8 +106,6 @@ h2 {
 }
 
 .menu {
-    left: 0;
-    top: 0;
     position: fixed;
     width: 0;
 }
@@ -126,9 +124,6 @@ h2 {
     .post-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    .menu {
-        width: 17em;
-    }
 }
 
 @media only screen and (min-width: 47em) {
@@ -143,7 +138,7 @@ h2 {
     }
     .menu {
         position: relative;
-        width: auto;
+        width: 17em;
     }
     .content-vertical {
         display: block;

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/sludinajums.css">
+    <link rel="stylesheet" href="style/main.css">
+    <title>Auto Scam</title>
+</head>
+<body>
+    <div class="site-layout">
+        <div class="menu">
+            <div class="content-vertical">
+                <div class="circle"></div>  
+                <div class="text">
+                    <a href="addCar.html">Sludinājumi</a>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <form class="search">
+                <input type="text" class="search">
+                <input type="submit" value="Meklēt" value="Submit">
+            </form>
+        </div>
+        <main>
+            
+        </main>
+    </div>
+</body>
+</html>

@@ -147,7 +147,6 @@
         </main>
     </div>
     <script>
-        // $(".menu").on("offset") = function(){ location.reload(); }
         function showMenu() {
             $(".menu").css("width", "17em");
             $(".menu").css("animation", "pop-in .5s ease-out 1");
@@ -164,6 +163,13 @@
             }, 500);
         }
         // width 734
+        $(window).on("resize", function(){
+            if($("html").width() >= 734){
+                // alert("width too high")
+                $(".menu").removeAttr("style");
+                $(".content-vertical").removeAttr("style");
+            }
+        });
         
     </script>
 </body>

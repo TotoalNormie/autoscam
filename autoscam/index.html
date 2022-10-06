@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/layout.css">
     <link rel="stylesheet" href="style/main.css">
     <title>Auto Scam</title>
 </head>
@@ -20,6 +21,7 @@
             </div>
         </div>
         <div class="header">
+            <button id="show-menu" onclick="showMenu()">☰</button>
             <form class="search">
                 <input type="text" class="search">
                 <input type="submit" value="Meklēt" value="Submit">
@@ -141,5 +143,13 @@
                 
         </main>
     </div>
+    <script>
+        let show = document.getElementById("show-menu");
+        let close = document.getElementById("close-menu");
+        function showMenu() {
+            show.setAttribute("style", "animation: pop-in .4s ease-out 1");
+            show.style.display = "absolute";
+        }
+    </script>
 </body>
 </html>

@@ -50,14 +50,11 @@
                     </details>
                     <details>
                         <summary>Gads</summary>
-                        <p>
-                            <input type="range" name="year" id="year-range" min="1990" max="2022" value="2022">
-                        </p>
-                        <p><span id="year-out">2022</span>. gads</p>
+                        <p> <input type="range" name="year" id="year-range" min="1990" max="2022" value="2022"> </p>
+                        <p> <span id="year-out">2022</span>. gads </p>
                     </details>
                     <details>
                         <summary>Nobraukums</summary>
-                        <label for="nobraukums">Maksimālais nobraukums: </label>
                         <input name="nobraukums" type="number" min="1" max="10000000">
                     </details>
                     <details>
@@ -228,13 +225,6 @@
         $(".btn1").click(function(){
             $("p").slideUp();
         });
-        $(document).on("click", "details summary", function(){
-            $(this).parent().index('details p').slideToggle();
-            
-        });
-        // $("summary").click(function(){
-        //     alert($("summary").index());
-        // });
     </script>
 </body>
 </html>

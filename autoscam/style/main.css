@@ -153,6 +153,7 @@ details input[type=number] {
     border: none;
 }
 details input[type=checkbox] {
+    background-color: rgb(174, 189, 202);
     appearance: none;
     position: relative;
     width: 1em;
@@ -176,6 +177,15 @@ details input[type=checkbox]:checked::before {
 details input[type=checkbox]:checked {
     background-color: rgba(120, 149, 178, .3);;
 }
+details input[type=checkbox]:focus {
+    box-shadow: 0 0 3px rgba(0, 0, 0, .4);
+}
+details input[type=submit] { 
+    padding: .5em;
+    margin: .5em 0;
+
+}
+
 
 @media only screen and (max-width: 47em) {
     .menu {

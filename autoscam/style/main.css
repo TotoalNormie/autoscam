@@ -154,15 +154,27 @@ details input[type=number] {
 }
 details input[type=checkbox] {
     appearance: none;
+    position: relative;
     width: 1em;
     aspect-ratio: 1;
     border: 2px solid rgb(120, 149, 178);
     border-radius: 20%;
-    margin: 0
+    margin: 0;
+}
+details input[type=checkbox]:before {
+    content: "✔";
+    color: white;
+    position: absolute;
+    font-size: .7em;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+details input[type=checkbox]:checked::before {
+    display: block;
 }
 details input[type=checkbox]:checked {
-    content: "&#10004;";
-    background-color: rgba(120, 149, 178, .5);;
+    background-color: rgba(120, 149, 178, .3);;
 }
 
 @media only screen and (max-width: 47em) {

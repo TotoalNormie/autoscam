@@ -15,10 +15,61 @@
         <div class="menu">
             <div class="content-vertical">
                 <button id="close-menu" onclick="closeMenu()">&#171;</button>
-                <a href="index.html">
-                    <img src="images/logo.png" alt="">
-                </a>
-                <div class="text">
+                <div class="logo">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+                    <h1>Autoscam.lv</h1>
+                    <span>"Buy High Sell Cheap"</span>
+                </div>
+                
+                <form method="get" class="filter">
+                    <h3>Filtri:</h3>
+                    <details>
+                        <summary>Marka</summary>
+                        <p>
+                            <input type="checkbox" name="Audi" id="">
+                            <label for="Audi">Audi</label> 
+                        </p>
+                        <p>
+                            <input type="checkbox" name="BMW" id="">
+                            <label for="BMW">BMW</label> 
+                        </p>
+                        <p>
+                            <input type="checkbox" name="Mazda" id="">
+                            <label for="Mazda">Mazda</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="Mercedes" id="">
+                            <label for="Mercedes">Mercedes</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="Toyota" id="">
+                            <label for="Toyota">Toyota</label>
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Gads</summary>
+                        <p>
+                            <input type="range" name="year" id="year-range" min="1990" max="2022" value="2022">
+                        </p>
+                        <p><span id="year-out">2022</span>. gads</p>
+                    </details>
+                    <details>
+                        <summary>Nobraukums</summary>
+                        <label for="nobraukums">Maksimālais nobraukums: </label>
+                        <input name="nobraukums" type="number" min="1" max="10000000">
+                    </details>
+                    <details>
+                        <summary>Cena</summary>
+                        <p>
+                            <input type="range" name="price" id="price-range" min="0" max="100000" value="0">
+                        </p>
+                        <p><span id="price-out">0</span>€</p>
+                    </details>
+                    <button type="submit">Apstiprint izvēli</button>
+                </form>
+                <div class="links">
                     <a href="addCar.html">Sludinājumi</a>
                 </div>
             </div>
@@ -162,15 +213,28 @@
                 $(".content-vertical").css("display", "none");
             }, 500);
         }
-        // width 734
         $(window).on("resize", function(){
             if($("html").width() >= 734){
-                // alert("width too high")
                 $(".menu").removeAttr("style");
                 $(".content-vertical").removeAttr("style");
             }
         });
-        
+        $(document).on('input', '#price-range', function() {
+            $('#price-out').html( $(this).val() );
+        });
+        $(document).on('input', '#year-range', function() {
+            $('#year-out').html( $(this).val() );
+        });
+        $(".btn1").click(function(){
+            $("p").slideUp();
+        });
+        $(document).on("click", "details summary", function(){
+            $(this).parent().index('details p').slideToggle();
+            
+        });
+        // $("summary").click(function(){
+        //     alert($("summary").index());
+        // });
     </script>
 </body>
 </html>

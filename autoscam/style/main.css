@@ -2,7 +2,6 @@ main {
     width: 100%;
     min-height: 100%;
     background-color: white;
-
 }
 
 .site-layout {
@@ -23,7 +22,7 @@ main {
     transition-duration: 1s;
 }
 .post:hover {
-    box-shadow: 0 0 1em rgba(80, 90, 99, 0.8);
+    box-shadow: 2px 2px 1.5em rgba(0, 0, 0, 0.4);
 }
 h2 {
     font-family: 'Roboto', sans-serif;
@@ -116,6 +115,23 @@ h2 {
 }
 #close-menu:hover {
     background-color: rgb(120, 149, 178);
+}
+/* 
+details[open] summary ~ * {
+    animation: sweep .3s ease-in-out;
+} */
+@keyframes sweep {
+    0%    {opacity: 0; margin-top: -10px}
+    100%  {opacity: 1; margin-top: 0px}
+}
+details {
+    margin: .5em;
+}
+details > summary {
+    font-size: 1.3em;
+}
+details > summary > * {
+
 }
 
 @media only screen and (max-width: 47em) {

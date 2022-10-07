@@ -1,5 +1,6 @@
 *, *::after, *::before {
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
@@ -8,7 +9,6 @@
 body {
     margin: 0;
     font-size: 14px;
-    background-color: #F5EFE6;
     font-family: 'Fira Sans', sans-serif;
 }
 .site-layout {
@@ -44,7 +44,20 @@ body {
 .content-vertical{
     margin: 2pc;
 }
-img {
-    width: 5pc;
-    height: 5pc;
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo span {
+    font-size: .8em;
+    font-style: italic;
+}
+h1 {
+    margin: .2em 0 .1em 0;
+}
+a img {
+    width: 7pc;
+    height: 7pc;
 }

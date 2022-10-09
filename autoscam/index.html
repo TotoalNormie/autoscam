@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/layout.css">
     <link rel="stylesheet" href="style/main.css">
     <link rel="icon" href="images/logo.png" type="image/x-icon">
@@ -22,9 +23,17 @@
                     <h1>Autoscam.lv</h1>
                     <span>"Buy High, Sell Cheap"</span>
                 </div>
-                
+                <button id="forYou" onclick="info()"><h3>&#5167; Par mums</h3></button>
+                <div class="info">
+                    <p>Mūsu saite ir tieši priekš cilvēkiem, kuri grib atrast savu sapņu auto.</p>
+                    <p>Šeit tu varēsi atrast visas mašīnas no "a" līdz "z" ar cenu zemāku par jebkuru citu saiti (nevajag to pārbaudīt).</p>
+                    <p>Lieto mūsu filtrus un atrod tieši to, ko tu meklē.</p>
+                    <p>Vari pievienot pats savu sludinājumu.</p>
+                    <p>Vari lietot šo saiti uz savas mobīlās ierīces.</p>
+                    <a href="tos.html">Terms of service.</a>
+                </div>
                 <form method="get" class="filter">
-                    <h3>Filtri:</h3>
+                    <h3>Filtri</h3>
                     <details>
                         <summary>Marka</summary>
                         <p>
@@ -64,23 +73,24 @@
                         </p>
                         <p><span id="price-out">0</span>€</p>
                     </details>
-                    <button type="submit">Apstiprint izvēli</button>
+                    <button type="submit">Apstiprināt izvēli</button>
                 </form>
                 <div class="links">
-                    <a href="addCar.html">Sludinājumi</a>
+                    <a id="otherSite" href="addCar.html">Pievienot Sludinājumu</a>
                 </div>
             </div>
         </div>
         <div class="header">
             <button id="show-menu" onclick="showMenu()">☰</button>
             <form class="search">
-                <input type="text" class="search">
-                <input type="submit" value="Meklēt" value="Submit">
+                <input type="text" placeholder="Meklēt" class="search">
+                <button type="submit" class="search-icon"><i class="fa fa-search"></i></button>
             </form>
         </div>
         <main>
             <div class="layout">
-                <h2>Lineārs izkārtojums <input type="checkbox" name="layout" id="mode-change"></h2>
+                <h2><label for="layout">Lineārs izkārtojums: </label><input type="checkbox" name="layout" id="mode-change" onclick="checkbox()"></h2>
+                <h2><label for="mode">Dark-mode: </label><input type="checkbox" name="mode" id="mode-change" onclick="checkbox()"></h2>
             </div>
             <div class="post-container">
                 <a href="#" class="post">
@@ -222,9 +232,42 @@
         $(document).on('input', '#year-range', function() {
             $('#year-out').html( $(this).val() );
         });
-        $(".btn1").click(function(){
-            $("p").slideUp();
-        });
+        function info() {
+            $(".info").slideToggle();
+        }
+        function checkbox() {
+            if($("#mode-change").is(":checked")){
+                $(".post-container").css("grid-template-columns", "1fr");
+                $(".post").each(function(){
+                    $(this).css('display', 'flex');
+                    $(this).css('justify-content', 'space-between');
+                });
+                $(".image").each(function(){
+                    $(this).css('width', 'auto');
+                    $(this).css('height', '10em');
+                    $(this).css('aspect-ratio', '16 / 9');
+                    $(this).css('border-radius', '.8em 0 0 .8em');
+                });
+                $(".post-text").each(function(){
+                    $(this).css('display', 'flex');
+                    $(this).css('width', '100%');
+                    $(this).css('justify-content', 'space-around');
+                    $(this).css('align-items', 'center');
+                });
+            }else {
+                $(".post-container").removeAttr("style");
+                $(".post").each(function(){
+                    $(this).removeAttr("style");
+                });
+                $(".image").each(function(){
+                    $(this).removeAttr("style");
+                });
+                $(".post-text").each(function(){
+                    $(this).removeAttr("style");
+                });
+            }
+        }
+        $(document).ready(checkbox());
     </script>
 </body>
 </html>

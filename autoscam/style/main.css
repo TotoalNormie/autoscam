@@ -3,11 +3,13 @@ main {
     min-height: 100%;
     background-color: white;
 }
-
 .site-layout {
     grid-template-columns: 1fr;
 }
-
+.layout {
+    text-align: end;
+    margin: 1em 4em;
+}
 .post-container {
     display: grid;
     margin: 3em;
@@ -68,17 +70,9 @@ h2 {
     transition-duration: 1s;
     overflow: hidden;
 }
-.image-text::after {
-    content: "...";
-}
 .image-text:hover {
     color: white;
-    backdrop-filter: /*blur(5px)*/ brightness(40%);
-        -webkit-backdrop-filter: blur(5px) brightness(50%);
-        -moz-backdrop-filter: blur(5px) brightness(50%);
-        -o-backdrop-filter: blur(5px) brightness(50%);
-        -ms-backdrop-filter: blur(5px) brightness(50%);
-
+    backdrop-filter: brightness(40%);
 }
 
 #show-menu, #close-menu {
@@ -118,17 +112,12 @@ h2 {
 }
 
 .filter {
-    margin: .5em 0;
-    border: 3px solid rgb(120, 149, 178);
-    border-left: 0;
-    border-right: 0;
+    margin-top: 1em;
+    border-top: 3px solid rgb(120, 149, 178);
     text-align: center;
 }
-h3 {
-    margin: .5em 0;
-}
 details[open] summary ~ * {
-    animation: sweep .3s ease-in-out;
+    animation: sweep .4s ease-in-out;
 }
 @keyframes sweep {
     0%    {opacity: 0; margin-top: -10px}
@@ -148,19 +137,14 @@ details > summary:hover {
     border-radius: 4px;
 }
 details p {
-    margin: 0 0 0 .3em;
-}
-
-details input::-webkit-outer-spin-button,
-details input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    margin-left:.3em;
 }
 
 details input[type=number] {
-  -moz-appearance: textfield;
+    border: none;
+    width: 100%;
     background-color: rgba(120, 149, 178, .5);
-    border: 2px solid 
+    border: 2px solid rgb(120, 149, 178);
 }
 details input[type=number]:focus {
     border: none;
@@ -169,6 +153,7 @@ details input[type=number]:focus {
 
 .filter button {
     border: none;
+    width: 100%;
     padding: .5em 1em;
     border-radius: 2em;
     background-color: rgb(120, 149, 178);
@@ -176,13 +161,12 @@ details input[type=number]:focus {
     cursor: pointer;
 }
 
-
-
-
 @media only screen and (max-width: 47em) {
     .menu {
         position: fixed;
         width: 0;
+        height: 100vh;
+        overflow-y: auto;
     }
     .content-vertical {
         display: none;
@@ -208,6 +192,7 @@ details input[type=number]:focus {
     .menu {
         position: relative;
         width: 17em;
+        overflow-y: visible;
     }
     .content-vertical {
         display: block;

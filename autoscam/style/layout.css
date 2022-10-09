@@ -61,3 +61,36 @@ a img {
     width: 7pc;
     height: 7pc;
 }
+
+details input[type=number] {
+    border: none;
+    width: 100%;
+}
+details input[type=checkbox] {
+    background-color: rgb(174, 189, 202);
+    appearance: none;
+    position: relative;
+    width: .9em;
+    aspect-ratio: 1;
+    border: 2px solid rgb(120, 149, 178);
+    border-radius: 20%;
+    margin: 0;
+}
+details input[type=checkbox]:before {
+    content: "✔";
+    color: white;
+    position: absolute;
+    font-size: .8em;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+details input[type=checkbox]:checked::before {
+    display: block;
+}
+details input[type=checkbox]:checked {
+    background-color: rgba(120, 149, 178);;
+}
+details input[type=checkbox]:focus {
+    box-shadow: 0 0 3px rgba(0, 0, 0, .4);
+}

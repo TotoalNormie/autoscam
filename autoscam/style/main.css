@@ -8,7 +8,7 @@ main {
 }
 .layout {
     text-align: end;
-    margin: 1em 4em;
+    margin: 1em 5em;
 }
 .post-container {
     display: grid;
@@ -171,6 +171,9 @@ details input[type=number]:focus {
     .content-vertical {
         display: none;
     }
+    .layout {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 32em) {
@@ -206,12 +209,16 @@ details input[type=number]:focus {
     .post-container {
         grid-template-columns: repeat(3, 1fr);
     }
+    .layout {
+        display: block;
+    }
 }
 
 @media only screen and (min-width: 78em) {
     .post-container {
         grid-template-columns: repeat(4, 1fr);
     }
+
 }
 
 @keyframes pop-in {

@@ -89,7 +89,7 @@
         </div>
         <main>
             <div class="layout">
-                <h2><label for="layout">Lineārs izkārtojums: </label><input type="checkbox" name="layout" id="mode-change" onclick="checkbox()"></h2>
+                <h2><label for="layout">Lineārs izkārtojums: </label><input type="checkbox" name="layout" id="mode-change" onclick="line()"></h2>
             </div>
             <div class="post-container">
                 <a href="#" class="post">
@@ -224,6 +224,19 @@
                 $(".menu").removeAttr("style");
                 $(".content-vertical").removeAttr("style");
             }
+            if($("html").width() <= 940){
+                $("#mode-change").prop("checked", false);
+                $(".post-container").removeAttr("style");
+                $(".post").each(function(){
+                    $(this).removeAttr("style");
+                });
+                $(".image").each(function(){
+                    $(this).removeAttr("style");
+                });
+                $(".post-text").each(function(){
+                    $(this).removeAttr("style");
+                });
+            }
         });
         $(document).on('input', '#price-range', function() {
             $('#price-out').html( $(this).val() );
@@ -234,7 +247,7 @@
         function info() {
             $(".info").slideToggle();
         }
-        function checkbox() {
+        function line() {
             if($("#mode-change").is(":checked")){
                 $(".post-container").css("grid-template-columns", "1fr");
                 $(".post").each(function(){
@@ -266,7 +279,7 @@
                 });
             }
         }
-        $(document).ready(checkbox());
+        $(document).ready(line());
     </script>
 </body>
 </html>

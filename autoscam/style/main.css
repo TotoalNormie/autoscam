@@ -171,14 +171,15 @@ details input[type=number]:focus {
     .content-vertical {
         display: none;
     }
-    .layout {
-        display: none;
-    }
+    
 }
 
 @media only screen and (min-width: 32em) {
     .post-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .layout {
+        display: none;
     }
 }
 

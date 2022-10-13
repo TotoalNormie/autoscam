@@ -32,7 +32,7 @@
                     <p>Vari lietot šo saiti uz savas mobīlās ierīces.</p>
                     <a href="tos.html">Terms of service.</a>
                 </div>
-                <form method="get" class="filter">
+                <form method="get" class="filter" id="main-form">
                     <h3>Filtri</h3>
                     <details>
                         <summary>Marka</summary>
@@ -82,10 +82,10 @@
         </div>
         <div class="header">
             <button id="show-menu" onclick="showMenu()">☰</button>
-            <form class="search">
-                <input type="text" placeholder="Meklēt" class="search">
+            <div class="search">
+                <input type="text" placeholder="Meklēt" class="search" form="main-form">
                 <button type="submit" class="search-icon"><i class="fa fa-search"></i></button>
-            </form>
+            </div>
         </div>
         <main>
             <div class="layout">
